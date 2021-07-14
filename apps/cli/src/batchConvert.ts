@@ -16,13 +16,17 @@ export async function batchConvert(input: string, output: string) {
     asyncLimiting(async (relativePath) => {
       const destFilePath = path.join(output, relativePath)
       await mkdirp(path.dirname(destFilePath))
-      await convert({
-        input: path.resolve(input, relativePath),
-        output: path.resolve(
-          path.dirname(destFilePath),
-          fileName(destFilePath) + '.azw3',
-        ),
-      })
+      try {
+        await convert({
+          input: path.resolve(input, relativePath),
+          output: path.resolve(
+            path.dirname(destFilePath),
+            fileName(destFilePath) + '.azw3',
+          ),
+        })
+      } catch (e) {
+        console.error('转换出错: ', relativePath)
+      }
     }, 1),
   )
 }
