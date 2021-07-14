@@ -26,6 +26,7 @@
     "fs-extra": "^10.0.0",
     "glob": "^7.1.7",
     "glob-promise": "^4.2.0",
+    "i18next": "^20.3.3",
     "os-locale": "^5.0.0"
   },
   "devDependencies": {
