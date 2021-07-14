@@ -2,9 +2,9 @@ import promise from 'glob-promise'
 import * as path from 'path'
 import { mkdirp, pathExists } from 'fs-extra'
 import { AsyncArray, asyncLimiting } from '@liuli-util/async'
-import { convert } from 'node-ebook-converter'
 import { fileName } from './util/fileName'
-
+import { convert } from './util/convert'
+import chalk from 'chalk'
 export async function batchConvert(input: string, output: string) {
   const list = await promise('**/*.{epub,pdf,txt}', {
     cwd: path.resolve(input),
@@ -20,7 +20,7 @@ export async function batchConvert(input: string, output: string) {
         fileName(relativePath) + '.azw3',
       )
       if (await pathExists(destFilePath)) {
-        console.log('文件已转换: ', relativePath)
+        console.log(chalk.blue('文件已转换: ', relativePath))
         return
       }
       await mkdirp(path.dirname(destFilePath))
@@ -29,8 +29,9 @@ export async function batchConvert(input: string, output: string) {
           input: path.resolve(input, relativePath),
           output: destFilePath,
         })
+        console.log(chalk.green('转换成功: ', relativePath))
       } catch (e) {
-        console.error('转换出错: ', relativePath)
+        console.error(chalk.red('转换出错: ', relativePath))
       }
     }, 1),
   )
