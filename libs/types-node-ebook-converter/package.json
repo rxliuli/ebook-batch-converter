@@ -1,0 +1,6 @@
+{
+  "name": "@types/node-ebook-converter",
+  "version": "0.1.0",
+  "main": "index.d.ts",
+  "license": "MIT"
+}
