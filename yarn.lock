@@ -1299,6 +1299,11 @@
     os-locale "^5.0.0"
     ts-morph "^11.0.0"
 
+"@liuli-util/i18next-util@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@liuli-util/i18next-util/-/i18next-util-0.1.0.tgz#b25f9deee7159043d93701a5e70fb215a3c2eaec"
+  integrity sha512-L/4N725yL03Ugo61L/BtkrfrqHUOhy47I1cSCaOG2CZ26sBWlSDbyrutfenoZKvMiz0/+6lKGQMRrWvUJTSx2g==
+
 "@liuli-util/prettier-standard-config@*":
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/@liuli-util/prettier-standard-config/-/prettier-standard-config-0.1.0.tgz#d51cf2e788c03fccc19cce6f7da75262ee65c0d2"
