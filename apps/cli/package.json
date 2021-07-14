@@ -6,10 +6,12 @@
   "types": "dist/index.d.ts",
   "license": "MIT",
   "scripts": {
+    "setup": "yarn gen-i18n",
     "start": "ts-node src/bin.ts",
     "dev": "liuli-cli build cli --watch",
     "build": "rm dist && liuli-cli build cli",
-    "test": "yarn start -i src/__tests__/temp/input/ -o src/__tests__/temp/output/"
+    "test": "yarn start -i src/__tests__/temp/input/ -o src/__tests__/temp/output/",
+    "gen-i18n": "i18next-dts-gen --input src/i18n"
   },
   "bin": {
     "ebook-batch-converter": "dist/bin.js"
@@ -23,10 +25,12 @@
     "commander": "^7.0.0",
     "fs-extra": "^10.0.0",
     "glob": "^7.1.7",
-    "glob-promise": "^4.2.0"
+    "glob-promise": "^4.2.0",
+    "os-locale": "^5.0.0"
   },
   "devDependencies": {
     "@liuli-util/cli": "^3.4.0",
+    "@liuli-util/i18next-dts-gen": "^0.2.1",
     "@liuli-util/shell": "^0.2.0",
     "@types/fs-extra": "^9.0.11",
     "@types/jest": "^26.0.23",

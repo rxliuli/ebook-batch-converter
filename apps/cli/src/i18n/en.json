@@ -1,0 +1,12 @@
+{
+  "cli": {
+    "description": "Batch convert epub etc files to azw3 using ebook-converter",
+    "input": "Input directory",
+    "output": "Output directory"
+  },
+  "msg": {
+    "skip": "File converted: ",
+    "success": "Conversion successful: ",
+    "error": "Conversion error: "
+  }
+}

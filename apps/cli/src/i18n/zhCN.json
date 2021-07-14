@@ -1,0 +1,12 @@
+{
+  "cli": {
+    "description": "使用 ebook-converter 批量转换 epub 等文件为 azw3",
+    "input": "输入目录",
+    "output": "输出目录"
+  },
+  "msg": {
+    "skip": "文件已转换: ",
+    "success": "转换成功: ",
+    "error": "转换出错: "
+  }
+}

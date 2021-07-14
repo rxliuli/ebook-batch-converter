@@ -8,3 +8,4 @@ yarn-error.log
 # build dist
 dist/
 **/__tests__/temp
+**/i18n/**/index.d.ts
