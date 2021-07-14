@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 0.3.0
+
+- chore(ebook-batch-converter): 添加遗漏的依赖 i18next
+- docs(ebook-batch-converter): 添加基本的国际化支持
+- refactor(ebook-batch-converter): 自行实现 ebook-converter 命令行的封装代码
+
 ## 0.2.0
 
 - feat(ebook-batch-converter): 对已经转换过的文件不再转换
