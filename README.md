@@ -4,9 +4,11 @@
 
 Use ebook-converter to batch convert epub and other files to azw3 utility cli program.
 
-1. 下载程序
-2. 将
+1. From [github release](https://github.com/rxliuli/ebook-batch-converter/releases)
+   Download the program or install it using `go install github.com/rxliuli/ebook-batch-converter@latest`.
+2. Unzip the downloaded program and add it to the environment variables, type `ebook-batch-converter` and check
 3. `ebook-batch-converter -i <input> -o <output>`
+
 ## Requisites
 
 Install Calibre and add the Calibre directory in your installation directory to your environment variables. The
