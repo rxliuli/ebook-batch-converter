@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## 0.4.1
+
+- docs: 更新说明文件
+- fix: 修复 i18n 文件没有捆绑的错误
+
+## 0.4.0
+
+- 使用 golang 重写
+
 ## 0.3.0
 
 - chore(ebook-batch-converter): 添加遗漏的依赖 i18next
