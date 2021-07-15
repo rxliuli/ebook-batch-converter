@@ -1,6 +1,7 @@
 package main
 
 import (
+	i18nUtil "github.com/rxliuli/ebook-batch-converter/i18n"
 	"github.com/rxliuli/ebook-batch-converter/util"
 	"github.com/urfave/cli/v2"
 	"os"
@@ -11,13 +12,13 @@ func main() {
 	var output string
 	app := &cli.App{
 		Name:  "ebook-batch-converter",
-		Usage: "使用 ebook-converter 批量转换 epub 等文件为 azw3",
+		Usage: i18nUtil.T("cli.description"),
 		Flags: []cli.Flag{
 			&cli.StringFlag{
 				Name:        "input",
 				Aliases:     []string{"i"},
 				Value:       "",
-				Usage:       "输入目录",
+				Usage:       i18nUtil.T("cli.input"),
 				Required:    true,
 				Destination: &input,
 			},
@@ -25,7 +26,7 @@ func main() {
 				Name:        "output",
 				Aliases:     []string{"o"},
 				Value:       "",
-				Usage:       "输出目录",
+				Usage:       i18nUtil.T("cli.output"),
 				Required:    true,
 				Destination: &output,
 			},
@@ -36,5 +37,5 @@ func main() {
 		},
 	}
 
-	app.Run(os.Args)
+	_ = app.Run(os.Args)
 }

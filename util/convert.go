@@ -3,6 +3,7 @@ package util
 import (
 	"github.com/gobwas/glob"
 	"github.com/gookit/color"
+	i18nUtil "github.com/rxliuli/ebook-batch-converter/i18n"
 	"os"
 	"os/exec"
 	"path/filepath"
@@ -39,15 +40,15 @@ func BatchConvert(inputDir string, outputDir string) {
 		}
 		dest := ReplaceExt(filepath.Join(outputDir, rel), ".azw3")
 		if PathExists(dest) {
-			color.Blueln("已转换: ", rel)
+			color.Blueln(i18nUtil.T("msg.skip"), rel)
 			continue
 		}
 		_ = os.MkdirAll(filepath.Dir(dest), 0700)
 		err = convert(path, dest)
 		if err != nil {
-			color.Redln("转换失败: ", rel)
+			color.Redln(i18nUtil.T("msg.error"), rel)
 			continue
 		}
-		color.Greenln("转换成功: ", rel)
+		color.Greenln(i18nUtil.T("msg.success"), rel)
 	}
 }
