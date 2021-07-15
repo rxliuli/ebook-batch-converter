@@ -1,13 +1,10 @@
 {
   "name": "ebook-batch-converter",
-  "version": "0.1.0",
+  "version": "0.4.0",
   "scripts": {
     "start": "go run main.go -i ./util/temp/input/ -o ./util/temp/output/",
-    "build": "go build",
-    "build:win": "env-cmd -e win go build -o dist/win/ebook-batch-converter.exe",
-    "build:mac": "env-cmd -e mac go build -o dist/mac/ebook-batch-converter",
-    "build:linux": "env-cmd -e linux go build  -o dist/linux/ebook-batch-converter",
-    "build:all": "yarn build:win & yarn build:mac & yarn build:linux"
+    "build": "goreleaser release --snapshot --skip-publish --rm-dist",
+    "pub": "env-cmd goreleaser release"
   },
   "devDependencies": {
     "env-cmd": "^10.1.0"

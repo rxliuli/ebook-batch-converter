@@ -2,3 +2,4 @@ dist/
 node_modules/
 util/temp/
 .idea/
+.env
