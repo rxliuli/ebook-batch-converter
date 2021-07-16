@@ -3,3 +3,7 @@ node_modules/
 util/temp/
 .idea/
 .env
+*.tgz
+**/__tests__/temp/
+.cache/
+bin/
