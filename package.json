@@ -5,7 +5,7 @@
     "start": "go run main.go -i ./util/temp/input/ -o ./util/temp/output/",
     "build": "goreleaser release --snapshot --skip-publish --rm-dist",
     "pub": "env-cmd goreleaser release",
-    "postinstall": "npx simple-git-hooks",
+    "sync:hooks": "npx simple-git-hooks",
     "build:scripts": "rm bin && rollup -c",
     "install": "node bin/install.js"
   },
