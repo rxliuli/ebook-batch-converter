@@ -19,7 +19,7 @@ async function main() {
   ) {
     return
   }
-  console.log('正在下载二进制文件...')
+  console.log('Downloading binary file...')
   const zipPath = await downloadRelease(platformAndArch)
   await extractBinary(zipPath)
   await remove(zipPath)
